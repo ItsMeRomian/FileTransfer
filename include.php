@@ -64,9 +64,9 @@ tr {
 <?php
 
 //Get a list of all files in uploads folder
-function getlist($Trim, $DeleteButton) { 
+ function  getlist($Trim, $DeleteButton) { 
+ 	global $uploadfolder;
 	$files = glob($uploadfolder . '*'); 
-	
 	foreach($files as $file){
 		if (isset($Trim)) {
 			if ($Trim) { //remove path
@@ -84,6 +84,7 @@ function getlist($Trim, $DeleteButton) {
 }
 
 function deleteall() {
+	global $uploadfolder;
 	$files = glob($uploadfolder . '*'); 
 	foreach($files as $file){ 
 		unlink($file);
