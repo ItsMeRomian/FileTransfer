@@ -62,7 +62,6 @@ tr {
 }
 </style>
 <?php
-
 //Get a list of all files in uploads folder
  function  getlist($Trim, $DeleteButton) { 
  	global $uploadfolder;
@@ -75,14 +74,13 @@ tr {
 		}
 		if (isset($DeleteButton)) {
 			if ($DeleteButton) { //add delete button
-				echo "<tr><td>" . $file . "</td><td><a href='deleteone.php?id=" . $file . "'>delete</a></td><td> <a href='uploads/" .  $file . "'>view</a></td></tr> ";
+				echo "<tr><td>" . $file . "</td><td><a href='uploads/" .  $file . "'>view</a></td><td><a href='deleteone.php?id=" . $file . "'>delete</a></td></tr>";
 			} else {
 				echo $file . "<br>";
 			}
 		}
 	}
 }
-
 function deleteall() {
 	global $uploadfolder;
 	$files = glob($uploadfolder . '*'); 
@@ -91,7 +89,6 @@ function deleteall() {
 		header("Refresh:0");
 	}
 }
-
 $imagestypes = array
 (
 	'png' => 'image/png',
@@ -104,4 +101,6 @@ $imagestypes = array
 	'tiff' => 'image/tiff',
 	'tif' => 'image/tiff',
 	'svg' => 'image/svg+xml',
-	'svgz' => 'image/svg+xml');
+	'svgz' => 'image/svg+xml'
+);
+?>

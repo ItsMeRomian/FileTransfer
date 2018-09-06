@@ -5,7 +5,6 @@ $filetodelete = $uploadfolder . $_GET['id'];
 $files = glob($uploadfolder . '*'); 
 
 if (in_array($filetodelete, $files)) {
-	//echo "file removed.<br><br> <a href='index.php'>go back</a>";
 	header("Location: index.php");
 	unlink($filetodelete);
 } else {
