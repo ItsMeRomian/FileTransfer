@@ -1,0 +1,51 @@
+a:visited, a:hover {
+	color: blue;
+}
+html {
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+}
+div.main {
+	font-family: 'Montserrat', sans-serif;
+    width: 50;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	margin-top: 20px;
+}
+
+div.top {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.hidden {
+	display: none;
+}
+label, button {
+	background-color: green;
+    color: white;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+	margin-bottom: 5px;
+	font-size: 20px;
+
+}
+label:hover, button:hover {
+	background-color: darkgreen;
+}
+span.push {
+	margin-left: 30px;
+}
+.preview {
+	height: 80px;
+}
+tr {
+	text-align: left;
+}
