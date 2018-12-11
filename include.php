@@ -8,6 +8,7 @@ $uploadfolder = $root . $uploads;
 <header>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
+	<title>DYNA.HOST</title>
 </header>
 <body>
 <?php
@@ -41,13 +42,10 @@ function upload($uploads) {
         echo "<h1>yey</h1>File Uploaded, link to file:<br> <a href='" . $fileurl . "'>" . $fileurl . "</a><br>";
 		$filesize = $_FILES["FileToUpload"]["size"];
 		$type = $_FILES['FileToUpload']['type'];
-		$filesize = round($filesize * 0.000001, 0); // bytes to Kb
+		$fileinkb = round($filesize / 1024, 0); // bytes to Kb
+		$fileinmb = round($filesize / 1048576, 0); // bytes to Kb
+		echo "File size: <1kB<br>"  . $fileinkb . "or " . $fileinmb; 
 		
-		if ($filesize <= 0) { 
-			echo "File size: <1kB<br>"; 
-		} else {
-			echo "File size: " . $filesize . "kB<br>";
-		}
 		
 		echo "File Type: " . $type;
 		if (in_array($type, $imagestypes)) {
